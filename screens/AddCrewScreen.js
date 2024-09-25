@@ -9,10 +9,10 @@ const AddCrewScreen = ({ navigation }) => {
 
     const handleAddCrew = async () => {
         try {
-            await axios.post('http://192.168.1.100:5000/api/crew', { name, role }); // Reemplaza con la IP de tu máquina
+            await axios.post('http://192.168.0.101:5000/api/crew', { name, role }); // Reemplaza con la IP de tu máquina
             navigation.goBack(); // Regresa a la pantalla anterior
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
     };
 

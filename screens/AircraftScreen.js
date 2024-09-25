@@ -9,7 +9,7 @@ const AircraftScreen = () => {
     useEffect(() => {
         const fetchAircraft = async () => {
             try {
-                const response = await axios.get('http://192.168.0.98:5000/api/aircraft');
+                const response = await axios.get('http://192.168.0.101:5000/api/aircraft');
                 setAircraft(response.data);
             } catch (error) {
                 console.error(error);

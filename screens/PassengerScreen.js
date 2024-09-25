@@ -9,7 +9,7 @@ const PassengerScreen = () => {
     useEffect(() => {
         const fetchPassengers = async () => {
             try {
-                const response = await axios.get('http://192.168.0.98:5000/api/passengers');
+                const response = await axios.get('http://192.168.0.101:5000/api/passengers');
                 setPassengers(response.data);
             } catch (error) {
                 console.error(error);

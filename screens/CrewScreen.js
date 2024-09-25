@@ -11,7 +11,7 @@ const CrewScreen = (props) => {
     useEffect(() => {
         const fetchCrew = async () => {
             try {
-                const response = await axios.get('http://192.168.0.98:5000/api/crew');
+                const response = await axios.get('http://192.168.0.101:5000/api/crew');
                 setCrew(response.data);
             } catch (error) {
                 console.error(error);
@@ -23,7 +23,7 @@ const CrewScreen = (props) => {
 
     const handleAddCrew = async () => {
         try {
-            await axios.post('http://192.168.0.98:5000/api/crew', { name, role }); // Reemplaza con la IP de tu máquina
+            await axios.post('http://192.168.0.101:5000/api/crew', { name, role }); // Reemplaza con la IP de tu máquina
             props.navigation.goBack(); // Regresa a la pantalla anterior
         } catch (error) {
             console.error(error);

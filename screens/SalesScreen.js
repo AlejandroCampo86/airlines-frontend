@@ -9,7 +9,7 @@ const SalesScreen = () => {
     useEffect(() => {
         const fetchSales = async () => {
             try {
-                const response = await axios.get('http://192.168.0.98:5000/api/sales');
+                const response = await axios.get('http://192.168.0.101:5000/api/sales');
                 setSales(response.data);
             } catch (error) {
                 console.error(error);
